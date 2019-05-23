@@ -1,0 +1,4 @@
+This is an example of sending low, mid and high frequency amplitudes over osc.
+intended use audio visualization.
+
+<|-_=|>
