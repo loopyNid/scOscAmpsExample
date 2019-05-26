@@ -16,7 +16,7 @@ SynthDef(\player, {|amp = 0.2|
 	Out.kr(~bus2, sendMid);
 	Out.kr(~bus3, sendHi);
 }).play;
-OSCdef(\getamp, {
+OSCdef(\getamp, { // sends /amp message when recieving /getamp message
 	~godotAddress.sendMsg("/amp", ~bus1.getSynchronous.asFloat, ~bus2.getSynchronous.asFloat, ~bus3.getSynchronous.asFloat);
 }, "/getamp");
 )
